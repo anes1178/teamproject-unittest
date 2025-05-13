@@ -2,6 +2,10 @@
 
 class Cal {
 public:
+	int getSum(int a, int b) {
+		return a + b;
+	}
+
 	int getGop(int a, int b) {
 		return a * b;
 	}
@@ -9,12 +13,16 @@ public:
 		return a * a;
 	}
 };
+TEST(CalcTest, testGetSum) {
+	Cal cal;
+	EXPECT_EQ(5, cal.getSum(2, 3));
+}
 
-TEST(t1, Gop) {
+TEST(CalcTest, testGetGop) {
 	Cal cal;
 	EXPECT_EQ(6, cal.getGop(2,3));
 }
-TEST(t1, Zegop) {
+TEST(CalcTest, testGetZegop) {
 	Cal cal;
 	EXPECT_EQ(4, cal.getZegop(2));
 }
