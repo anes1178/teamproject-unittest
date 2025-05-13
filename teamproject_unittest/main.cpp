@@ -2,11 +2,21 @@
 
 class Cal {
 public:
-	// 이곳에 코드 작성
+	int getGop(int a, int b) {
+		return a * b;
+	}
+	int getZegop(int a) {
+		return a * a;
+	}
 };
 
-TEST(t1, t2) {
-	EXPECT_EQ(1, 1);
+TEST(t1, Gop) {
+	Cal cal;
+	EXPECT_EQ(6, cal.getGop(2,3));
+}
+TEST(t1, Zegop) {
+	Cal cal;
+	EXPECT_EQ(4, cal.getZegop(2));
 }
 
 int main() {
