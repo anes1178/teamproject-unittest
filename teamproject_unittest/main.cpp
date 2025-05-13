@@ -13,6 +13,13 @@ public:
 		return a + b;
 	}
 
+	int getDivide(int a, int b) {
+		if (b == 0) {
+			return -1;
+		}
+		return a / b;
+	}
+
 	int getGop(int a, int b) {
 		return a * b;
 	}
@@ -44,6 +51,13 @@ TEST(CalcTest, testGetDivide) {
 	Cal cal;
 
 	int ret = cal.getDivide(30, 10);
+
+	EXPECT_EQ(3, ret);
+}
+TEST(CalcTest, testGetMinus) {
+	Cal cal;
+
+	int ret = cal.getMinus(30, 10);
 
 	EXPECT_EQ(3, ret);
 }
