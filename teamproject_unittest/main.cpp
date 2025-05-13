@@ -2,14 +2,33 @@
 
 class Cal {
 public:
-	// ÀÌ°÷¿¡ ÄÚµå ÀÛ¼º
+	// ï¿½Ì°ï¿½ï¿½ï¿½ ï¿½Úµï¿½ ï¿½Û¼ï¿½
 	int getSumSum(int a, int b, int c) {
 		return (a + b + c);
+  
+	int getSum(int a, int b) {
+		return a + b;
+	}
+
+	int getGop(int a, int b) {
+		return a * b;
+	}
+	int getZegop(int a) {
+		return a * a;
 	}
 };
+TEST(CalcTest, testGetSum) {
+	Cal cal;
+	EXPECT_EQ(5, cal.getSum(2, 3));
+}
 
-TEST(t1, t2) {
-	EXPECT_EQ(1, 1);
+TEST(CalcTest, testGetGop) {
+	Cal cal;
+	EXPECT_EQ(6, cal.getGop(2,3));
+}
+TEST(CalcTest, testGetZegop) {
+	Cal cal;
+	EXPECT_EQ(4, cal.getZegop(2));
 }
 TEST(t1, t6) {
 	Cal cal;
