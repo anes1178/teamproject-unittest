@@ -2,6 +2,10 @@
 
 class Cal {
 public:
+	// �̰��� �ڵ� �ۼ�
+	int getSumSum(int a, int b, int c) {
+		return (a + b + c);
+  }
 	int getMinus(int a, int b) {
 		return a - b;
 	}
@@ -34,6 +38,10 @@ TEST(CalcTest, testGetGop) {
 TEST(CalcTest, testGetZegop) {
 	Cal cal;
 	EXPECT_EQ(4, cal.getZegop(2));
+}
+TEST(t1, t6) {
+	Cal cal;
+	EXPECT_EQ(6, cal.getSumSum(1, 2, 3));
 }
 
 int main() {
