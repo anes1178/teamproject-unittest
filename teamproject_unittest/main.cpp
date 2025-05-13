@@ -31,6 +31,7 @@ TEST(CalcTest, testGetMinus) {
 	int ret = cal.getMinus(30, 10);
 
 	EXPECT_EQ(20, ret);
+}
 TEST(CalcTest, testGetGop) {
 	Cal cal;
 	EXPECT_EQ(6, cal.getGop(2,3));
@@ -39,7 +40,7 @@ TEST(CalcTest, testGetZegop) {
 	Cal cal;
 	EXPECT_EQ(4, cal.getZegop(2));
 }
-TEST(t1, t6) {
+TEST(CalcTest, testgetSumSum) {
 	Cal cal;
 	EXPECT_EQ(6, cal.getSumSum(1, 2, 3));
 }
