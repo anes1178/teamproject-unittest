@@ -16,6 +16,14 @@ public:
 	int getGop(int a, int b) {
 		return a * b;
 	}
+
+	int getDivide(int a, int b) {
+		if (b == 0) {
+			return -1;
+		}
+		return a / b;
+	}
+
 	int getZegop(int a) {
 		return a * a;
 	}
@@ -31,6 +39,16 @@ TEST(CalcTest, testGetMinus) {
 	int ret = cal.getMinus(30, 10);
 
 	EXPECT_EQ(20, ret);
+}
+
+TEST(CalcTest, testGetDivide) {
+	Cal cal;
+
+	int ret = cal.getDivide(30, 10);
+
+	EXPECT_EQ(3, ret);
+}
+
 TEST(CalcTest, testGetGop) {
 	Cal cal;
 	EXPECT_EQ(6, cal.getGop(2,3));
